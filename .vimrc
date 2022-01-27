@@ -3,7 +3,29 @@ call plug#begin()
 	Plug 'preservim/nerdtree'
 	Plug 'preservim/nerdcommenter'
 	Plug 'PeterRincker/vim-searchlight'		" or qxxxb/vim-searchhi
+	Plug 'junegunn/fzf.vim'					" needs fzf to be installed on the system
 call plug#end()
+
+
+" --------
+" Mappings
+" --------
+
+" previous/next/new tab
+" notice the trailing space after :tabe
+nnoremap <F9> :tabp<CR>
+nnoremap <F10> :tabn<CR>
+nnoremap <F11> :tabe 
+nnoremap <F12> :tabclose
+
+
+cnoremap fzf FZF
+
+
+set scrolloff=5		" let the cursor stay in the middle
+
+
+set wildmenu	" autocomplete on commands and paths
 
 
 set laststatus=2							" use lightline
@@ -35,7 +57,7 @@ set ignorecase	" allows commands in lowercase
 set smartcase	" still use case (smart) in search /
 
 
-set number
+set number relativenumber
 
 
 set mouse=		" do not react to mouse input
