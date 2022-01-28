@@ -6,6 +6,11 @@ call plug#begin()
 	Plug 'junegunn/fzf.vim'					" needs fzf to be installed on the system
 call plug#end()
 
+" lightline
 set laststatus=2							" use lightline
 set noshowmode								" hide the vim mode, as this is now handled by lightline
 let g:lightline = {'colorscheme': 'deus'}	" deus ++, one +-, material 0, materia -, apprentice -
+
+" fzf
+let g:fzf_layout = {'down': '~40%'}
+nnoremap <silent> <C-F> :FZF<CR>
