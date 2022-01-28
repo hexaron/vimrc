@@ -5,7 +5,9 @@ endfunction
 
 function! OpenTerminal()
 	term
+	call term_sendkeys("", "git lg\n")
 	resize 15
+	wincmd j
 endfunction
 
 function! OpenWorkspace()
@@ -13,4 +15,4 @@ function! OpenWorkspace()
 	call OpenTerminal()
 endfunction
 
-nnoremap <space> :call OpenWorkspace()<CR>git lg<CR><C-W>j
+nnoremap <silent> <space> :call OpenWorkspace()<CR>
